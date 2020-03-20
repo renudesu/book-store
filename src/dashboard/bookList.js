@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { GetBooks, DeleteBook } from '../services/book';
+import { GetBooks} from '../services/book';
 class BookList extends React.Component {
 
     constructor() {
@@ -28,21 +28,7 @@ class BookList extends React.Component {
                 });
             })
     }
-    deleteBook = () => {
-        const book = {
-            name: this.state.name,
-            author: [this.state.author],
-            cost: this.state.cost,
-            currencyIn: this.state.currencyIn,
-            description: this.state.description,
-            imageUrl: this.state.imageUrl
-        };
-        DeleteBook(book).then(
-            (response) => {
-                console.log(response);
-            }
-        )
-    }
+
     render() {
         const listOfBooks = this.state.books.map((value, index) => {
 
@@ -54,7 +40,7 @@ class BookList extends React.Component {
                         <h5 className="card-title">{value.name}</h5>
                         <p className="card-text">{value.author.join(', ')}</p>
 
-                        <button type="button" className="btn btn-primary" onClick={() => this.addToCart(value)}>Add to cart</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.addToCart(value)}>Add to Cart</button>
 
                     </div>
 
