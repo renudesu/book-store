@@ -1,5 +1,5 @@
 import React from 'react';
-import { CreateBooks} from '../../services/book';
+import { CreateBooks } from '../../services/book';
 import { withRouter } from 'react-router-dom';
 
 class AddBook extends React.Component {
@@ -46,8 +46,6 @@ class AddBook extends React.Component {
 
                 <div className='row mt-5 '>
                     <div className='col-md-8 '></div>
-
-
                     <div className='col-md-4 float-right'>
                         <form >
                             <h3 className='text-primary mb-5'>Add Book</h3>

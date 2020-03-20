@@ -10,3 +10,6 @@ export function CreateBooks(book){
 export function DeleteBook(id){
     return axios.delete(`${BOOK_URL}/${id}`, { headers: { 'x-access-token': localStorage.getItem('token') } });
 }
+export function UpdateBook(book) {
+    return axios.put(`${BOOK_URL}/${book._id}`, book, { headers: { 'x-access-token': localStorage.getItem('token') } });
+}

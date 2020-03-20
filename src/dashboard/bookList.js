@@ -55,7 +55,7 @@ class BookList extends React.Component {
                         <p className="card-text">{value.author.join(', ')}</p>
 
                         <button type="button" className="btn btn-primary" onClick={() => this.addToCart(value)}>Add to cart</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.deleteBook(value)}>DeleteBook</button>
+
                     </div>
 
                 </div>
